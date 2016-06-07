@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.adn.serviciochat"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.firebase:firebase-database:9.0.1'
+    compile 'com.google.firebase:firebase-auth:9.0.1'
+    compile 'com.google.android.gms:play-services-auth:9.0.1'
+    compile 'com.android.support:cardview-v7:23.3.+'
+    compile 'com.android.support:recyclerview-v7:23.3.+'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.firebaseui:firebase-ui-database:0.4.0'
+    compile 'com.google.firebase:firebase-messaging:9.0.1'
+
+    //compile 'com.google.android.gms:play-services-auth:9.0.1#sthash.PgRXCaSh.dpuf'
+}
+apply plugin: 'com.google.gms.google-services'
