@@ -84,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements
         } else {
             mUsername = mFirebaseUser.getDisplayName();
             mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
+            if(mPhotoUrl==null) {
+                mPhotoUrl = "https://lh3.googleusercontent.com/-eNvAFdl2wRo/AAAAAAAAAAI/AAAAAAAAAAA/9hysi6yJWZ0/photo.jpg";
+
+            }
         }
 
 
